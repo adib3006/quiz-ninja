@@ -13,7 +13,7 @@ const NavBar = () => {
             title='quizNinja'
           >
             <span className='ml-2 text-xl font-bold tracking-wide text-gray-800'>
-              Quiz Ninja
+              <span className='text-sky-500'>Quiz</span> Ninja
             </span>
           </Link>
           <ul className='flex items-center hidden space-x-8 lg:flex'>
@@ -81,7 +81,7 @@ const NavBar = () => {
                         title='quizNinja'
                       >
                         <span className='ml-2 text-xl font-bold tracking-wide text-gray-800'>
-                          Quiz Ninja
+                        <span className='text-sky-500'>Quiz</span> Ninja
                         </span>
                       </Link>
                     </div>

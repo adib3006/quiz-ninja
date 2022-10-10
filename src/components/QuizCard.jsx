@@ -24,8 +24,6 @@ const QuizCard = ({quiz,setCount,setCorrectCount,setWrongCount}) => {
                     options.map((option,index)=><li key={index} className='mt-3'><button onClick={()=>handleAnswer(option)} className='w-full px-4 py-2 rounded bg-slate-200 hover:bg-slate-400'>{option}</button></li>)
                 }
             </ul>
-            <button></button>
-            <p>Correct answer: {correctAnswer}</p>
         </div>
     );
 };
