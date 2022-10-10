@@ -4,14 +4,14 @@ import QuizCard from './QuizCard';
 
 const Quiz = () => {
     const quizesData = useLoaderData();
-    const quizes = quizesData.data.questions;
-    console.log(quizes);
+    const {questions,name} = quizesData.data;
+    console.log(questions);
     return (
         <div>
-            <p className='text-4xl text-center p-10'>This is quiz page</p>
+            <p className='text-4xl text-center p-10'>{name}</p>
             <div className='flex flex-col items-center'>
                 {
-                    quizes.map(quiz => <QuizCard key={quiz.id} quiz={quiz}></QuizCard>)
+                    questions.map(quiz => <QuizCard key={quiz.id} quiz={quiz}></QuizCard>)
                 }
             </div>
         </div>
