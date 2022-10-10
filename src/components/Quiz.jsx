@@ -1,44 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import QuizCard from './QuizCard';
-//import Result from './Result';
 
 const Quiz = () => {
     const quizesData = useLoaderData();
-    const { questions, name, total } = quizesData.data;
-    const [count, setCount] = useState(0);
-    const [correctCount, setCorrectCount] = useState(0);
-    const [wrongCount, setWrongCount] = useState(0);
+    const { questions, name } = quizesData.data;
 
-    console.log(total, count, correctCount, wrongCount);
     return (
         <div>
-            <p className='text-4xl text-center p-10'>{name}</p>
+            <p className='text-4xl text-center p-10 text-gray-500'>{name}</p>
             <div className='flex'>
-                <div className='w-3/4 flex flex-col items-end'>
+                <div className='w-full flex flex-col items-center'>
                     {
                         questions.map(quiz => <QuizCard
                             key={quiz.id}
                             quiz={quiz}
-
-                            setCount={setCount}
-
-                            setCorrectCount={setCorrectCount}
-
-                            setWrongCount={setWrongCount}
                         ></QuizCard>)
                     }
-                </div>
-                <div className='w-1/5'>
-                    {/* {
-                        total === count && <Result 
-                        count={count} 
-                        correctCount={correctCount} 
-                        wrongCount={wrongCount}
-                        setCount={setCount}
-                        setCorrectCount={setCorrectCount}
-                        setWrongCount={setWrongCount}></Result>
-                    } */}
                 </div>
             </div>
         </div>
