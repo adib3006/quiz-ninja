@@ -1,5 +1,7 @@
 # Project name: Quiz Ninja
 
+site link: https://quiz-ninja-adnan.netlify.app/
+
 Build using:
 1. React
 2. React routers
